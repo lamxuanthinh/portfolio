@@ -1,15 +1,15 @@
 "use client";
 
-import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
-import { Fade } from "react-awesome-reveal";
-import Link from "next/link";
-import { BsLinkedin } from "react-icons/bs";
-import { FaGithubSquare , FaFacebook} from "react-icons/fa";
-import { useSectionInView } from "@/lib/useInView";
 import { useActiveSectionContext } from "@/containers/active-section";
+import { useSectionInView } from "@/lib/useInView";
+import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Fade } from "react-awesome-reveal";
+import { BsLinkedin } from "react-icons/bs";
+import { FaFacebook, FaGithubSquare, FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Intro() {
   const { ref } = useSectionInView("#home", 0.5);
@@ -42,7 +42,7 @@ export default function Intro() {
               priority={true}
               className="rounded-full object-cover shadow-xl"
             />
-          </motion.div> 
+          </motion.div>
 
           <motion.span
             className="text-6xl absolute bottom-8 right-12"
@@ -60,15 +60,15 @@ export default function Intro() {
         </div>
       </div>
       <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce={true}>
-      <h1 className="mb-10 mt-4 px-4 text-2xl sm:text-4xl">
-        <span className="font-medium !leading-[1.5] ">Bring your ideas to life with tailored web and app solutions.</span>{" "}
-        <p className="text-[14px]">
-          I’m a developer who builds seamless digital experiences from front to back.
-        </p>
-      </h1>
+        <h1 className="mb-10 mt-4 px-4 text-2xl sm:text-4xl">
+          <span className="font-medium !leading-[1.5] ">Bring your ideas to life with tailored web and app solutions.</span>{" "}
+          <p className="text-[14px]">
+            I’m a developer who builds seamless digital experiences from front to back.
+          </p>
+        </h1>
       </Fade>
       <motion.div
-        className="flex sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium"
+        className="flex flex-wrap sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -100,13 +100,35 @@ export default function Intro() {
           <FaGithubSquare />
         </a>
         <a
-            className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-            href="https://www.facebook.com/thinh.lam.3910/"
-            target="_blank"
+          className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://www.facebook.com/thinh.lam.3910/"
+          target="_blank"
         >
           <FaFacebook />
         </a>
+        <a
+          className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://www.youtube.com/@thinh-lam"
+          target="_blank"
+        >
+          <FaYoutube />
+        </a>
+        <a
+          className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://x.com/XunThnh29366283"
+          target="_blank"
+        >
+          <FaXTwitter />
+        </a>
+        <a
+          className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://www.tiktok.com/@thinhlam749"
+          target="_blank"
+        >
+          <FaTiktok />
+        </a>
       </motion.div>
+
     </section>
   );
 }

@@ -1,11 +1,11 @@
 "use client";
 
+import { CONTACT_EMAIL } from "@/constants/mail";
+import { useSectionInView } from "@/lib/useInView";
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
-import { useSectionInView } from "@/lib/useInView";
 import SubmitBtn from "./submit-btn";
-import {CONTACT_EMAIL} from "@/constants/mail";
 
 export default function Contact() {
     const { ref } = useSectionInView("#contact");
