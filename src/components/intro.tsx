@@ -87,7 +87,7 @@ export default function Intro() {
         </Link>
         <a
           className="bg-gray-900 p-4 text-white flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/thinh-lam-jocelyn-85837b1b8/"
+          href="https://www.linkedin.com/in/jocelyn-lam-85837b1b8/"
           target="_blank"
         >
           <BsLinkedin />
